@@ -1,1 +1,17 @@
-hichamhaouche
+##################################################
+${HOME}/chemin/mail -t <<FIN
+<HTML>
+<CENTER><B><FONT size=4 color="#00FF00" >Alerte sur Toto `date +"%A %d %B %Y %H:%M:%S"`
+</FONT></B></CENTER>
+<PRE>
+</B>
+<TABLE border=1>
+<TD BGCOLOR=#00FF00><PRE><B>Merci toto <B></PRE><TD>
+</TABLE>
+</PRE>
+</HTML>
+$(for nom in $(awk 'BEGIN{FS=";} 
+{print $1; print "la personne correspond"}' < toto.log )
+ do
+echo $nom
+done)
